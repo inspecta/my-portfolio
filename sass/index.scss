@@ -1,0 +1,202 @@
+@import "variables";
+@import "mixins";
+@import "utils";
+@import "buttons";
+
+.logo {
+  width: 80px;
+}
+
+.flex {
+  display: flex;
+}
+
+.none {
+  list-style: none;
+}
+
+aside,
+.nav-list {
+  display: none;
+}
+
+nav {
+  width: 100%;
+
+  .mobile-view {
+    display: $display-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    padding: 25px;
+
+    .logo {
+      width: 50px;
+    }
+
+    .menu-icon {
+      width: 40px;
+    }
+  }
+}
+
+.intro {
+  // color: $primary-color;
+  color: set-font-color($primary-color);
+}
+
+.about-me {
+  margin-bottom: $spacing-two;
+  line-height: $spacing-two;
+}
+
+.header-hr {
+  margin-bottom: $spacing-one;
+  margin-top: $spacing-one;
+}
+
+.technologies {
+  list-style: none;
+
+  li::before {
+    content: "▶";
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+.work-places {
+  align-items: center;
+}
+
+.companies {
+  cursor: pointer;
+  margin-right: 25px;
+
+  li {
+    width: 130px;
+    padding: 5px;
+  }
+}
+
+.cyber-work {
+  display: none;
+}
+
+.active {
+  background: $secondary-color;
+  box-shadow: 0 2px 0 0 #000;
+}
+
+.roles {
+  li::before {
+    content: "▶";
+    padding: 10px;
+    font-size: 10px;
+  }
+}
+
+.contact-me {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+
+  .footer-icons {
+    text-align: center;
+    justify-content: center;
+
+    li {
+      padding: 10px;
+    }
+
+    p {
+      color: darken($primary-color, 30%);
+    }
+  }
+}
+
+/*
+header {
+  display: flex;
+  flex-direction: row;
+  z-index: 5;
+  width: 100%;
+  height: 75px;
+  position: fixed;
+}
+
+nav {
+  @include flex-space-between();
+  width: 100%;
+  margin: auto;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: $spacing-one;
+}
+
+.nav-list > li a {
+  text-decoration: none;
+}
+
+main {
+  width: 80%;
+  margin: auto;
+  padding: 4em;
+}
+
+.home {
+  width: 100%;
+}
+
+.sidebar-right,
+.sidebar-left {
+  height: 100vh;
+  width: 100px;
+}
+
+.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100px;
+  gap: 10em;
+}
+
+.sidebar-icons {
+  list-style: none;
+  padding: 15px;
+  font-size: 1.5em;
+  margin: 0 auto;
+}
+
+.sidebar-icons > li {
+  padding: 5px;
+}
+
+.sidebar-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+hr {
+  height: 100px;
+  rotate: 180deg;
+  margin: 0 auto;
+  width: 0;
+}
+
+.home-email {
+  font-size: 20px;
+  rotate: 90deg;
+}
+
+section {
+  margin-bottom: 4em;
+}
+*/

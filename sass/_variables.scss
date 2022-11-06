@@ -1,0 +1,29 @@
+$font-family: "Nunito", sans-serif;
+$primary-color: #36e600;
+$secondary-color: rgba(0, 226, 230, 0.37);
+$spacing-one: 1em;
+$spacing-two: 2em;
+$display-flex: flex;
+$flex-row: row;
+$flex-column: column;
+
+@function set-font-color($color) {
+  @if (lightness($color) > 10) {
+    @return rgba(0, 61, 230, 0.74);
+  } @else {
+    @return blue;
+  }
+}
+
+//Padding
+$sizes: (1, 2, 3, 4, 5, 6);
+
+@each $size in $sizes {
+  .pd-#{$size} {
+    padding: #{$size}em;
+  }
+
+  .fs-#{$size} {
+    font-size: #{$size}em;
+  }
+}

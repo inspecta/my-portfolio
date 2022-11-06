@@ -1,0 +1,23 @@
+%btn {
+  padding: 20px 40px;
+  border-radius: 5px;
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    color: darken($secondary-color, 30%);
+  }
+}
+
+.btn-course {
+  @extend %btn;
+  // color: darken($secondary-color, 40%);
+  @include set-background(lighten($secondary-color, 40%));
+  margin-bottom: 3em;
+}
+
+.btn-contact {
+  @extend %btn;
+  @include set-background(lighten($secondary-color, 40%));
+  margin: 3em auto 0 0;
+}

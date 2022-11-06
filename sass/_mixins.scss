@@ -1,0 +1,12 @@
+@import "variables";
+
+@mixin flex-center {
+  display: $display-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin set-background($color) {
+  background-color: $color;
+  color: set-font-color($color);
+}
