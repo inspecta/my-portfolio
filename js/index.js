@@ -2,7 +2,6 @@ const miic = document.getElementById('miic');
 const cyber = document.getElementById('cyber');
 const microverse = document.getElementById('microverse');
 
-//Works
 const cyberWorks = document.querySelector('.cyber-work');
 const miicWorks = document.querySelector('.miic-work');
 const microverseWorks = document.querySelector('.microverse-work');
@@ -33,4 +32,3 @@ cyber.addEventListener('click', () => {
   miic.classList.remove('active');
   cyber.classList.add('active');
 });
-// }
