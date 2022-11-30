@@ -20,3 +20,10 @@
   color: $secondary-color;
   font-size: 1em;
 }
+
+.btn-resume {
+  @extend %btn;
+  border: 2px solid $secondary-color;
+  color: $secondary-color;
+  font-size: 1em;
+}
