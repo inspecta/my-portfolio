@@ -80,28 +80,49 @@
 
 body {
   font-family: "Nunito", sans-serif;
-  background-color: #36e600;
-  color: rgba(0, 61, 230, 0.74);
-  background-color: rgba(0, 226, 230, 0.37);
+  background-color: rgba(10, 25, 47, 0.85);
+  color: rgba(10, 25, 47, 0.85);
+  background-color: rgba(10, 25, 47, 0.85);
   line-height: 1.6; }
 
-.btn-course, .btn-contact {
+.btn-course,
+.btn-contact {
   padding: 20px 40px;
   border-radius: 5px;
   display: inline-block;
-  cursor: pointer; }
-  .btn-course:hover, .btn-contact:hover {
-    color: rgba(0, 76, 77, 0.37); }
+  cursor: pointer;
+  background-color: transparent;
+  outline: none; }
+  .btn-course:hover,
+  .btn-contact:hover {
+    background: rgba(94, 241, 207, 0.2);
+    color: #5ef1cf; }
 
-.btn-course {
-  background-color: rgba(179, 254, 255, 0.37);
-  color: rgba(0, 61, 230, 0.74);
-  margin-bottom: 3em; }
-
+.btn-course,
 .btn-contact {
-  background-color: rgba(179, 254, 255, 0.37);
-  color: rgba(0, 61, 230, 0.74);
-  margin: 3em auto 0 0; }
+  border: 2px solid #5ef1cf;
+  margin-bottom: 3em;
+  color: #5ef1cf;
+  font-size: 1em; }
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.font-1 {
+  font-family: "Montserrat", sans-serif; }
+
+.font-2 {
+  font-family: "Roboto", sans-serif; }
+
+.font-3 {
+  font-family: "Anek Devanagari", sans-serif; }
+
+body {
+  background: #0a192f; }
 
 .logo {
   width: 80px; }
@@ -112,12 +133,31 @@ body {
 .none {
   list-style: none; }
 
+.color-1 {
+  color: #5ef1cf; }
+
+.color-2 {
+  color: #abb6d4; }
+
+.white {
+  color: #fff; }
+
+.heading-hr h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 1em; }
+.heading-hr hr {
+  flex-grow: 1; }
+
 aside,
 .nav-list {
   display: none; }
 
 nav {
-  width: 100%; }
+  width: 100%;
+  background-color: rgba(10, 25, 47, 0.85); }
   nav .mobile-view {
     display: flex;
     align-items: center;
@@ -126,50 +166,143 @@ nav {
     padding: 25px; }
     nav .mobile-view .logo {
       width: 50px; }
-    nav .mobile-view .menu-icon {
-      width: 40px; }
+    nav .mobile-view .fa-bars {
+      font-size: 2em;
+      color: #5ef1cf; }
 
-.intro {
-  color: rgba(0, 61, 230, 0.74); }
+.home {
+  width: 100%; }
+  .home .intro {
+    color: #5ef1cf; }
+  .home .home-header {
+    color: #fff; }
+  .home .home-info {
+    color: #abb6d4; }
+  .home .home-about-me {
+    color: #abb6d4;
+    margin-bottom: 4em; }
 
 .about-me {
+  text-align: justify; }
+  .about-me p {
+    margin-bottom: 1em; }
+  .about-me .technologies {
+    list-style: none;
+    margin-bottom: 3em; }
+    .about-me .technologies li::before {
+      content: "▹";
+      padding-right: 10px;
+      font-size: 20px;
+      color: #5ef1cf; }
+  .about-me .about-me-photo .photo {
+    background: url("../images/profile-photo.jpg") no-repeat;
+    height: 350px;
+    width: 350px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin: auto;
+    border-radius: 10px; }
+  .about-me .about-me-photo .layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(94, 241, 207, 0.6);
+    width: 100%;
+    height: 100%;
+    border-radius: 10px; }
+  .about-me .about-me-photo:hover .layer {
+    display: none; }
+
+.experience {
+  text-align: justify; }
+  .experience .active {
+    color: #5ef1cf;
+    background-color: rgba(94, 241, 207, 0.1);
+    border-bottom: 3px solid #5ef1cf;
+    margin-bottom: -2px;
+    font-weight: bold; }
+  .experience .work-places {
+    display: flex;
+    flex-direction: column; }
+    .experience .work-places .works {
+      width: 100%; }
+    .experience .work-places .work-title {
+      font-size: 1.5em; }
+    .experience .work-places .companies {
+      border-bottom: 1px solid #abb6d4;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+      cursor: pointer; }
+      .experience .work-places .companies li {
+        padding: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px; }
+    .experience .work-places .work-places {
+      align-items: center; }
+    .experience .work-places .cyber-work,
+    .experience .work-places .miic-work {
+      display: none; }
+    .experience .work-places .roles li::before {
+      content: "▹";
+      padding: 10px;
+      font-size: 20px;
+      color: #5ef1cf; }
+
+.projects .projects-bg {
+  position: relative;
+  height: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 3em; }
+.projects .project-info {
+  position: relative;
+  background-color: rgba(9, 34, 70, 0.97);
+  padding: 2em;
+  box-shadow: 0 0 1px 1px rgba(94, 241, 207, 0.1); }
+  .projects .project-info .featured {
+    color: #5ef1cf; }
+  .projects .project-info .project-header:hover {
+    color: #5ef1cf;
+    cursor: pointer; }
+  .projects .project-info p {
+    color: #fff;
+    text-align: justify;
+    margin-bottom: 1em; }
+  .projects .project-info .project-tools {
+    display: flex; }
+    .projects .project-info .project-tools .tools-list {
+      padding-right: 10px;
+      margin-bottom: 15px; }
+.projects .links {
+  display: flex; }
+  .projects .links .fa {
+    color: #abb6d4;
+    padding-right: 0.7em;
+    font-size: 1.5em;
+    cursor: pointer; }
+
+.contact-me p {
+  color: #abb6d4;
+  margin-bottom: 2em; }
+.contact-me .contact-me-btn {
   display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex: 50%; }
+  justify-content: center; }
+
+footer ul > li > a {
+  font-size: 2em;
+  color: #abb6d4; }
+footer ul > li > a:hover {
+  color: #5ef1cf; }
+footer p {
+  color: #abb6d4; }
 
 .header-hr {
   margin-bottom: 1em;
   margin-top: 1em; }
-
-.technologies {
-  list-style: none; }
-  .technologies li::before {
-    content: "▶";
-    padding: 10px;
-    font-size: 10px; }
-
-.work-places {
-  align-items: center; }
-
-.companies {
-  cursor: pointer;
-  margin-right: 25px; }
-  .companies li {
-    width: 130px;
-    padding: 5px; }
-
-.cyber-work {
-  display: none; }
-
-.active {
-  background: rgba(0, 226, 230, 0.37);
-  box-shadow: 0 2px 0 0 #000; }
-
-.roles li::before {
-  content: "▶";
-  padding: 10px;
-  font-size: 10px; }
 
 .contact-me {
   width: 100%; }
@@ -182,7 +315,7 @@ footer {
     footer .footer-icons li {
       padding: 10px; }
     footer .footer-icons p {
-      color: #124d00; }
+      color: rgba(0, 0, 0, 0.85); }
 
 @media (min-width: 768px) {
   header {
@@ -226,6 +359,9 @@ footer {
 
   .home {
     width: 100%; }
+
+  .intro {
+    color: #5ef1cf; }
 
   .sidebar-right,
   .sidebar-left {

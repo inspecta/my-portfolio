@@ -3,21 +3,20 @@
   border-radius: 5px;
   display: inline-block;
   cursor: pointer;
+  background-color: transparent;
+  outline: none;
 
   &:hover {
-    color: darken($secondary-color, 30%);
+    background: rgba(94, 241, 207, 0.2);
+    color: $secondary-color;
   }
 }
 
-.btn-course {
-  @extend %btn;
-  // color: darken($secondary-color, 40%);
-  @include set-background(lighten($secondary-color, 40%));
-  margin-bottom: 3em;
-}
-
+.btn-course,
 .btn-contact {
   @extend %btn;
-  @include set-background(lighten($secondary-color, 40%));
-  margin: 3em auto 0 0;
+  border: 2px solid $secondary-color;
+  margin-bottom: 3em;
+  color: $secondary-color;
+  font-size: 1em;
 }

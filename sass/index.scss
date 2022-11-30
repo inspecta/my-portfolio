@@ -3,6 +3,30 @@
 @import "utils";
 @import "buttons";
 
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.font-1 {
+  font-family: "Montserrat", sans-serif;
+}
+
+.font-2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.font-3 {
+  font-family: "Anek Devanagari", sans-serif;
+}
+
+body {
+  background: #0a192f;
+}
+
 .logo {
   width: 80px;
 }
@@ -15,6 +39,32 @@
   list-style: none;
 }
 
+.color-1 {
+  color: $secondary-color;
+}
+
+.color-2 {
+  color: $tertiary-color;
+}
+
+.white {
+  color: #fff;
+}
+
+.heading-hr {
+  h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+
+  hr {
+    flex-grow: 1;
+  }
+}
+
 aside,
 .nav-list {
   display: none;
@@ -22,6 +72,7 @@ aside,
 
 nav {
   width: 100%;
+  background-color: $primary-color;
 
   .mobile-view {
     display: $display-flex;
@@ -34,71 +85,223 @@ nav {
       width: 50px;
     }
 
-    .menu-icon {
-      width: 40px;
+    .fa-bars {
+      font-size: 2em;
+      color: $secondary-color;
     }
   }
 }
 
-.intro {
-  // color: $primary-color;
-  color: set-font-color($primary-color);
+.home {
+  width: 100%;
+
+  .intro {
+    color: $secondary-color;
+  }
+
+  .home-header {
+    color: #fff;
+  }
+
+  .home-info {
+    color: $tertiary-color;
+  }
+
+  .home-about-me {
+    color: $tertiary-color;
+    margin-bottom: 4em;
+  }
 }
 
 .about-me {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  flex: 50%;
-  // flex-grow: 1;
-  // margin-bottom: $spacing-two;
-  // line-height: $spacing-two;
+  text-align: justify;
+
+  p {
+    margin-bottom: 1em;
+  }
+
+  .technologies {
+    list-style: none;
+    margin-bottom: 3em;
+
+    li::before {
+      content: "▹";
+      padding-right: 10px;
+      font-size: 20px;
+      color: $secondary-color;
+    }
+  }
+
+  .about-me-photo {
+    .photo {
+      background: url("../images/profile-photo.jpg") no-repeat;
+      height: 350px;
+      width: 350px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      margin: auto;
+      border-radius: 10px;
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(94, 241, 207, 0.6);
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .about-me-photo:hover {
+    .layer {
+      display: none;
+    }
+  }
+}
+
+.experience {
+  text-align: justify;
+
+  .active {
+    color: $secondary-color;
+    background-color: rgba(94, 241, 207, 0.1);
+    border-bottom: 3px solid $secondary-color;
+    margin-bottom: -2px;
+    font-weight: bold;
+  }
+
+  .work-places {
+    display: flex;
+    flex-direction: column;
+
+    .works {
+      width: 100%;
+    }
+
+    .work-title {
+      font-size: 1.5em;
+    }
+
+    .companies {
+      border-bottom: 1px solid $tertiary-color;
+      margin-bottom: 1em;
+      display: flex;
+      flex-direction: row;
+      gap: 1em;
+      cursor: pointer;
+
+      li {
+        padding: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+    }
+
+    .work-places {
+      align-items: center;
+    }
+
+    .cyber-work,
+    .miic-work {
+      display: none;
+    }
+
+    .roles {
+      li::before {
+        content: "▹";
+        padding: 10px;
+        font-size: 20px;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+.projects {
+  .projects-bg {
+    position: relative;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 3em;
+  }
+
+  .project-info {
+    position: relative;
+    background-color: rgba(9, 34, 70, 0.97);
+    padding: 2em;
+    box-shadow: 0 0 1px 1px rgba(94, 241, 207, 0.1);
+
+    .featured {
+      color: $secondary-color;
+    }
+
+    .project-header:hover {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    p {
+      color: #fff;
+      text-align: justify;
+      margin-bottom: 1em;
+    }
+
+    .project-tools {
+      display: flex;
+
+      .tools-list {
+        padding-right: 10px;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  .links {
+    display: flex;
+
+    .fa {
+      color: $tertiary-color;
+      padding-right: 0.7em;
+      font-size: 1.5em;
+      cursor: pointer;
+    }
+  }
+}
+
+.contact-me {
+  p {
+    color: $tertiary-color;
+    margin-bottom: 2em;
+  }
+
+  .contact-me-btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+footer {
+  ul > li > a {
+    font-size: 2em;
+    color: $tertiary-color;
+  }
+
+  ul > li > a:hover {
+    color: $secondary-color;
+  }
+  p {
+    color: $tertiary-color;
+  }
 }
 
 .header-hr {
   margin-bottom: $spacing-one;
   margin-top: $spacing-one;
-}
-
-.technologies {
-  list-style: none;
-
-  li::before {
-    content: "▶";
-    padding: 10px;
-    font-size: 10px;
-  }
-}
-
-.work-places {
-  align-items: center;
-}
-
-.companies {
-  cursor: pointer;
-  margin-right: 25px;
-
-  li {
-    width: 130px;
-    padding: 5px;
-  }
-}
-
-.cyber-work {
-  display: none;
-}
-
-.active {
-  background: $secondary-color;
-  box-shadow: 0 2px 0 0 #000;
-}
-
-.roles {
-  li::before {
-    content: "▶";
-    padding: 10px;
-    font-size: 10px;
-  }
 }
 
 .contact-me {
@@ -175,6 +378,10 @@ footer {
     width: 100%;
   }
 
+  .intro {
+    color: $secondary-color;
+  }
+
   .sidebar-right,
   .sidebar-left {
     height: 100vh;
@@ -216,7 +423,6 @@ footer {
   .header-hr {
     height: 0;
     rotate: 180deg;
-    // margin: 0 auto;
     width: 100%;
   }
 

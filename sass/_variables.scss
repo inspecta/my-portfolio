@@ -1,6 +1,9 @@
 $font-family: "Nunito", sans-serif;
-$primary-color: #36e600;
-$secondary-color: rgba(0, 226, 230, 0.37);
+// $primary-color: #36e600;
+$primary-color: rgba(10, 25, 47, 0.85);
+$secondary-color: rgba(94, 241, 207, 1);
+$secondary-color-2: rgba(94, 241, 207, 0.4);
+$tertiary-color: rgba(171, 182, 212, 1);
 $spacing-one: 1em;
 $spacing-two: 2em;
 $display-flex: flex;
@@ -9,7 +12,7 @@ $flex-column: column;
 
 @function set-font-color($color) {
   @if (lightness($color) > 10) {
-    @return rgba(0, 61, 230, 0.74);
+    @return rgba(10, 25, 47, 0.85);
   } @else {
     @return blue;
   }
