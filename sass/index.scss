@@ -2,7 +2,6 @@
 @import "mixins";
 @import "utils";
 @import "buttons";
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&display=swap");
 
@@ -135,6 +134,9 @@ nav {
   }
 
   .about-me-photo {
+    display: flex;
+    justify-content: center;
+
     .photo {
       background: url("../images/profile-photo.jpg") no-repeat;
       height: 350px;
@@ -365,11 +367,6 @@ nav {
     textarea:invalid {
       box-shadow: 0 0 0 1px red;
     }
-
-    // input:valid,
-    // textarea:valid {
-    //   box-shadow: 0 0 0 1px rgb(0, 255, 0);
-    // }
   }
 }
 
@@ -382,6 +379,7 @@ footer {
   ul > li > a:hover {
     color: $secondary-color;
   }
+
   p {
     color: $tertiary-color;
   }

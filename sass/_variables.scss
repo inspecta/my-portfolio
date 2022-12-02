@@ -13,7 +13,9 @@ $flex-column: column;
 @function set-font-color($color) {
   @if (lightness($color) > 10) {
     @return rgba(10, 25, 47, 0.85);
-  } @else {
+  }
+
+  @else {
     @return blue;
   }
 }

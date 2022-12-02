@@ -8,7 +8,9 @@
 
 body {
   font-family: $font-family;
+
   @include set-background($primary-color);
+
   background-color: $primary-color;
   line-height: 1.6;
 }

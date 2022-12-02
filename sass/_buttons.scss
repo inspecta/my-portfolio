@@ -15,6 +15,7 @@
 .btn-course,
 .btn-contact {
   @extend %btn;
+
   border: 2px solid $secondary-color;
   margin-bottom: 3em;
   color: $secondary-color;
@@ -23,6 +24,7 @@
 
 .btn-resume {
   @extend %btn;
+
   border: 2px solid $secondary-color;
   color: $secondary-color;
   font-size: 1em;
@@ -30,8 +32,8 @@
 
 .btn-submit-message {
   @extend %btn;
+
   border: 2px solid $secondary-color;
   color: $secondary-color;
   font-size: 1em;
-  // padding: 0.7em;
 }
