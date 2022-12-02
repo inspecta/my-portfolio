@@ -32,3 +32,24 @@ cyber.addEventListener('click', () => {
   miic.classList.remove('active');
   cyber.classList.add('active');
 });
+
+//View Github Profile
+const githubUrl = document.querySelector('.btn-course');
+githubUrl.addEventListener('click', () => {
+  window.open('https://github.com/inspecta/', '_blank');
+});
+
+//Contact Me
+const contactMe = document.querySelector('.btn-contact');
+const contactForm = document.getElementById('contact-form');
+const closeForm = document.querySelector('.fa-times');
+
+contactMe.addEventListener('click', () => {
+  contactForm.style.display = 'flex';
+  contactForm.style.visibility = 'visible';
+});
+
+closeForm.addEventListener('click', () => {
+  contactForm.style.display = 'none';
+  contactForm.style.visibility = 'hidden';
+});

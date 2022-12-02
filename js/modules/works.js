@@ -4,7 +4,7 @@ const works = [
     company: 'Microverse',
     class: 'microverse',
     title: 'Student Mentor',
-    date: 'August - Current',
+    date: 'August 2022 - Current',
     roles: ['I mentor junior web developers, providng them with technical support through code reviews.',
       'I also provide advice and motivation to these developers.',
       'I propose improvements to code organization to improve code quality and overall performance.'
