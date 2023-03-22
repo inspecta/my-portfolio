@@ -3,7 +3,7 @@ const projects = [
     id: 1,
     name: 'Book Store CMS',
     description: 'A content management system for books developed using React, Redux, and API calls. Add a new book using the POST API method, GET stored books, and also DELETE unwanted books. For API calls, I used the AXIOS Library.',
-    tools: ['React/Redux', 'GitHub', 'GitFlow'],
+    tools: ['ReactJs', 'Redux', 'APIs', 'Jest', 'HTML/CSS'],
     links: ['https://github.com/inspecta/Dex-Books', 'https://bookstore-cms-derrick.netlify.app'],
     bg: 'BookStore.png',
   },
@@ -11,7 +11,7 @@ const projects = [
     id: 2,
     name: 'Microverse Monthly Assembly',
     description: "Microverse monthly assembly; is the capstone project of my first module at Microverse using HTML semantic practices, and DOM Manipulation to dynamically generate speakers' content. Responsive and designed using the Mobile- first design. Its a replica of the CC Global Summit Korea conference in 2015.'",
-    tools: ['HTML', 'CSS', 'JavaScript', 'Linters'],
+    tools: ['JavaScript', 'HTML5', 'CSS3'],
     links: ['https://github.com/inspecta/Capstone-web-project', 'https://inspecta.github.io/Capstone-web-project/'],
     bg: 'MicroverseZoomAssembly.png',
   },
@@ -19,7 +19,7 @@ const projects = [
     id: 3,
     name: 'YouFlex',
     description: 'A capstone JavaScript application that utilizes 2 APIs to display movies and enables users to like and comment on their favorite movies. The application consists of the Homepage that contains the list of movies and a popup window that displays details of a specific movie, its likes, and comments.',
-    tools: ['APIs', 'Kanban', 'GitFlow', 'GitHub'],
+    tools: ['JavaScript', 'WebPack', 'RestAPIs', 'HTML5', 'CSS3'],
     links: ['https://github.com/Khaled-AlKhateeb/YouFlex', 'https://khaled-alkhateeb.github.io/YouFlex/'],
     bg: 'YouFlex.png'
   }
@@ -27,14 +27,18 @@ const projects = [
 
 const projectsSection = document.querySelector('.projects-div');
 projects.map((project) => {
-  const projectsBg = document.createElement('div');
-  projectsBg.classList.add('projects-bg');
-  projectsSection.appendChild(projectsBg);
-  projectsBg.style.backgroundImage = `url(../../images/projects/${project.bg})`;
+  const projectContainer = document.createElement('div');
+  projectContainer.classList.add('projects-container');
+  projectsSection.appendChild(projectContainer);
 
   const projectDiv = document.createElement('div');
   projectDiv.classList.add('project-info');
-  projectsBg.appendChild(projectDiv);
+  projectContainer.appendChild(projectDiv);
+
+  const projectsBg = document.createElement('div');
+  projectsBg.classList.add('projects-bg');
+  projectContainer.appendChild(projectsBg);
+  projectsBg.style.backgroundImage = `url(../../images/projects/${project.bg})`;
 
   const featuredProject = document.createElement('p');
   featuredProject.setAttribute('class', 'featured');
@@ -69,13 +73,15 @@ projects.map((project) => {
   const github = document.createElement('i');
   projectLinks.appendChild(github);
   github.setAttribute('class', 'fa fa-github');
+  github.setAttribute('title', 'Source Code');
   github.addEventListener('click', () => {
     window.open(project.links[0], '_blank');
   });
 
   const live = document.createElement('i');
   projectLinks.appendChild(live);
-  live.setAttribute('class', 'fa fa-link');
+  live.setAttribute('class', 'fa fa-share-square-o');
+  live.setAttribute('title', 'Live Demo');
   live.addEventListener('click', () => {
     window.open(project.links[1], '_blank');
   })

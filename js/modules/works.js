@@ -1,38 +1,47 @@
 const works = [
   {
-    id: 1,
-    company: 'Microverse',
+    id: 3,
+    company: 'Cyber Dynamics',
     class: 'microverse',
-    title: 'Student Mentor',
-    date: 'August 2022 - Current',
-    roles: ['I mentor junior web developers, providng them with technical support through code reviews.',
-      'I also provide advice and motivation to these developers.',
-      'I propose improvements to code organization to improve code quality and overall performance.'
+    title: 'Backend Developer',
+    date: 'May 2017 - March 2021',
+    roles: [
+      'Developed high-quality software that met or even exceeded user expectations\
+       using the Agile methodology',
+      'Optimized code compilation by identifying and fixing performance bottlenecks.',
+      'Successfully trained and mentored interns.',
     ],
   },
   {
     id: 2,
-    company: 'MIIC',
+    company: 'Onooli',
     class: 'miic',
-    title: 'Java Backend Developer',
-    date: 'April 2021 - Dec 2022',
-    roles: ['Makerere Innovation and Incubation Center',
-      'Developing and deploying Rest APIs',
-      'Worked with a variety of languages, platforms and frameworks including Java (Spring Boot), Postgress, Hibernate, JWT.'
+    title: 'Software Engineer',
+    date: 'March 2021 - July 2022',
+    roles: [
+      'I was involved in the development and launching of backend APIs. I helped\
+       in the design and development of robust and reliable APIs that met needs \
+       of fintech startups.',
+      ' Improved performance and scalability by using cutting-edge frameworks. \
+      This in turn reduced the time and cost required to develop APIs.',
     ],
   },
   {
     id: 3,
-    company: 'Cyber Dynamics',
+    company: 'Epsilon Uganda Limited',
     class: 'cyber',
-    title: 'Backend Developer',
-    date: 'May 2017 - March 2021',
-    roles: ['Designing and developing user specifications',
-      'Developing and deploying Rest APIs',
-      'Worked with a variety of languages, platforms and frameworks including HTML, CSS, Javascript, PHP and Spring Boot.',
-      'Was also involved in application testing using Jest.'
+    title: 'Information Technology Support Engineer',
+    date: 'April 2014 - March 2017',
+    roles: [
+      'I streamlined installations, configurations, and troubleshooting of software, \
+      hardware, and networks',
+      'I developed comprehensive training programs that improved staff computer \
+      usage, performance, and productivity.',
+      'I developed an employee Clock-in application that replaced the manual \
+      registration book'
     ],
-  }];
+  }
+];
 
 const workPlaces = document.querySelector('.work-places');
 

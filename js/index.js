@@ -53,3 +53,31 @@ closeForm.addEventListener('click', () => {
   contactForm.style.display = 'none';
   contactForm.style.visibility = 'hidden';
 });
+
+/*
+  Menu
+*/
+// const menu = document.querySelector('.mobile-menu');
+const hamburgerMenu = document.querySelector('.fa-bars');
+const closeMenu = document.querySelector('.fa-close');
+const menu = document.querySelector('.nav-list');
+
+hamburgerMenu.addEventListener('click', () => {
+  hamburgerMenu.style.display = 'none';
+  closeMenu.style.display = 'block';
+  menu.style.display = 'block';
+});
+
+closeMenu.addEventListener('click', () => {
+  hamburgerMenu.style.display = 'block';
+  closeMenu.style.display = 'none';
+  menu.style.display = 'none';
+});
+
+menu.addEventListener('click', () => {
+  if (window.innerWidth < 768) {
+    menu.style.display = 'none';
+    closeMenu.style.display = 'none';
+    hamburgerMenu.style.display = 'block';
+  }
+});

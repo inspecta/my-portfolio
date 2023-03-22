@@ -59,6 +59,7 @@ body {
     align-items: center;
     gap: 1em;
     margin-bottom: 1em;
+    margin-top: 3em;
   }
 
   hr {
@@ -66,14 +67,38 @@ body {
   }
 }
 
-aside,
+aside {
+  display: none;
+}
+
 .nav-list {
   display: none;
+  position: fixed;
+  background-color: rgba(10, 25, 47, 0.95);
+  overflow: auto;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 10;
+  width: 100%;
+  height: 90vh;
+  margin: 0 auto;
+
+  li {
+    margin-bottom: 20px;
+    text-align: right;
+    padding-right: 10px;
+
+    a {
+      text-decoration: none;
+    }
+  }
 }
 
 nav {
   width: 100%;
-  // background-color: $primary-color;
+  position: fixed;
+  background-color: #0a192f;
+  z-index: 1;
 
   .mobile-view {
     display: $display-flex;
@@ -81,14 +106,25 @@ nav {
     justify-content: space-between;
     margin: auto;
     padding: 25px;
+    cursor: pointer;
 
     .logo {
       width: 50px;
     }
 
-    .fa-bars {
+    .fa-bars,
+    .fa-close {
       font-size: 2em;
       color: $secondary-color;
+    }
+
+    .fa-close {
+      display: none;
+    }
+
+    .fa-bars:hover,
+    .fa-close:hover {
+      color: $tertiary-color;
     }
   }
 }
@@ -98,6 +134,7 @@ nav {
 
   .intro {
     color: $secondary-color;
+    margin-top: 8em;
   }
 
   .home-header {
@@ -111,6 +148,7 @@ nav {
   .home-about-me {
     color: $tertiary-color;
     margin-bottom: 4em;
+    text-align: justify;
   }
 }
 
@@ -228,20 +266,27 @@ nav {
 }
 
 .projects {
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-bottom: 3em;
+  }
+
   .projects-bg {
-    position: relative;
-    height: auto;
-    background-position: center;
+    height: 20em;
     background-repeat: no-repeat;
     background-size: cover;
-    margin-bottom: 3em;
+    border-radius: 10px;
+  }
+
+  .project-info {
+    flex-basis: 50%;
   }
 
   .project-info {
     position: relative;
-    background-color: rgba(9, 34, 70, 0.92);
-    padding: 1em;
-    box-shadow: 0 0 1px 1px rgba(94, 241, 207, 0.1);
+    padding: 1rem;
 
     .featured {
       color: $secondary-color;
@@ -271,12 +316,17 @@ nav {
 
   .links {
     display: flex;
+    align-items: center;
 
     .fa {
       color: $tertiary-color;
-      padding-right: 0.7em;
+      margin-right: 0.7em;
       font-size: 1.5em;
       cursor: pointer;
+    }
+
+    .fa:hover {
+      color: $secondary-color;
     }
   }
 }
@@ -417,7 +467,7 @@ footer {
     flex-direction: row;
     z-index: 5;
     width: 100%;
-    height: 75px;
+    height: 100px;
     position: fixed;
 
     .sidebar-left > ul > li > a {
@@ -464,32 +514,47 @@ footer {
       display: none;
     }
 
-    aside,
-    .nav-list {
+    aside {
       display: block;
-    }
-
-    nav {
-      display: $display-flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 40px 0 0 0;
-
-      .mobile-view {
-        padding: 0;
-        width: 10%;
-        margin-left: 0;
-      }
     }
 
     .nav-list {
       display: flex;
+    }
+
+    nav {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #0a192f;
+
+      .mobile-view {
+        padding: 0;
+        width: 10%;
+      }
+    }
+
+    .nav-list {
+      position: relative;
+      display: flex;
       list-style: none;
       gap: $spacing-one;
       align-items: center;
+      height: auto;
+      background-color: transparent;
+      width: auto;
 
       li a {
         text-decoration: none;
+      }
+
+      .btn-resume {
+        margin-right: 15px;
+      }
+
+      li a .nav-title:hover {
+        color: #fff;
       }
     }
   }
@@ -515,6 +580,7 @@ footer {
 
     .home-about-me {
       font-size: 1.8em;
+      text-align: justify;
     }
   }
 
@@ -615,6 +681,20 @@ footer {
     .projects-div {
       display: flex;
       flex-direction: column;
+    }
+
+    .projects-container {
+      display: flex;
+      flex-direction: row;
+
+      .project-info {
+        flex-basis: 50%;
+      }
+
+      .projects-bg {
+        // height: 20em;
+        flex-basis: 50%;
+      }
     }
   }
 
