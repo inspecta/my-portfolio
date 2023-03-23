@@ -1,6 +1,6 @@
 const works = [
   {
-    id: 3,
+    id: 1,
     company: 'Cyber Dynamics',
     class: 'microverse',
     title: 'Backend Developer',

@@ -176,10 +176,10 @@ nav {
     justify-content: center;
 
     .photo {
-      background: url("../images/profile-photo.jpg") no-repeat;
+      background: url("../images/profile-photo-2.png") no-repeat;
       height: 350px;
       width: 350px;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       position: relative;
       margin: auto;
@@ -190,7 +190,7 @@ nav {
       position: absolute;
       top: 0;
       left: 0;
-      background-color: rgba(94, 241, 207, 0.6);
+      // background-color: rgba(94, 241, 207, 0.6);
       width: 100%;
       height: 100%;
       border-radius: 10px;
@@ -281,11 +281,8 @@ nav {
   }
 
   .project-info {
-    flex-basis: 50%;
-  }
-
-  .project-info {
     position: relative;
+    flex-basis: 50%;
     padding: 1rem;
 
     .featured {
@@ -469,6 +466,7 @@ footer {
     width: 100%;
     height: 100px;
     position: fixed;
+    border-bottom: 1px solid $secondary-color;
 
     .sidebar-left > ul > li > a {
       color: $tertiary-color;
