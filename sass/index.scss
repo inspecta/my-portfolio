@@ -162,6 +162,12 @@ nav {
   .technologies {
     list-style: none;
     margin-bottom: 3em;
+    width: 100%;
+
+    .technologies-list {
+      display: flex;
+      gap: 1em;
+    }
 
     li::before {
       content: "▹";
@@ -332,6 +338,7 @@ nav {
   position: relative;
   width: 100%;
   margin: auto;
+  margin-bottom: 5em;
 
   p {
     color: $tertiary-color;
@@ -435,6 +442,7 @@ footer {
 .header-hr {
   margin-bottom: $spacing-one;
   margin-top: $spacing-one;
+  border-top: 0;
 }
 
 .contact-me {
@@ -488,13 +496,13 @@ footer {
       flex-direction: column;
       justify-content: flex-end;
       width: 100px;
-      gap: 10em;
+      gap: 16em;
     }
 
     .sidebar-icons {
       list-style: none;
       padding: 15px;
-      font-size: 1.5em;
+      font-size: 2.5em;
       margin: 0 auto;
     }
 
@@ -577,7 +585,7 @@ footer {
     }
 
     .home-about-me {
-      font-size: 1.8em;
+      font-size: 1.2em;
       text-align: justify;
     }
   }
@@ -600,7 +608,7 @@ footer {
   }
 
   .home-email {
-    font-size: 20px;
+    font-size: 30px;
     rotate: 90deg;
   }
 
@@ -639,14 +647,13 @@ footer {
     padding: 0;
 
     .work-places {
-      display: flex;
-      flex-direction: row;
-      gap: 1em;
-      flex-grow: 1;
-      height: 30vh;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      width: 80%;
+      margin: auto;
 
       .works {
-        width: 40%;
+        width: 100%;
 
         .companies {
           display: flex;
@@ -659,7 +666,6 @@ footer {
             border-radius: 0;
             padding: 5px;
             background: none;
-            width: 160px;
           }
         }
 

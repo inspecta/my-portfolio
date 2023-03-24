@@ -1,5 +1,17 @@
 const projects = [
   {
+    id: 4,
+    name: 'Bridal Cars Reservation',
+    description: 'Bridal cars is a full-stack application that allows users to\
+     reserve a bridal car. Using this app, users can log in by typing their \
+     usernames and passwords. Once logged in, they can see all the available cars,\
+      and the car details and can reserve a car',
+    tools: ['Ruby on Rails', 'React', 'Redux', 'RESTful API', 'HTML/CSS'],
+    links: ['https://github.com/inspecta/bridal-cars-backend', '\
+    https://deploy-preview-18--storied-madeleine-8f057b.netlify.app/cars'],
+    bg: 'BridalCarReservation.png',
+  },
+  {
     id: 1,
     name: 'Book Store CMS',
     description: 'A content management system for books developed using React, Redux, and API calls. Add a new book using the POST API method, GET stored books, and also DELETE unwanted books. For API calls, I used the AXIOS Library.',

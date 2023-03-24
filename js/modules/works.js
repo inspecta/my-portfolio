@@ -28,9 +28,9 @@ const works = [
   },
   {
     id: 3,
-    company: 'Epsilon Uganda Limited',
+    company: 'Epsilon Ug Ltd',
     class: 'cyber',
-    title: 'Information Technology Support Engineer',
+    title: 'IT Support Engineer',
     date: 'April 2014 - March 2017',
     roles: [
       'I streamlined installations, configurations, and troubleshooting of software, \
