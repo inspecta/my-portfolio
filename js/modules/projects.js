@@ -50,7 +50,7 @@ projects.map((project) => {
   const projectsBg = document.createElement('div');
   projectsBg.classList.add('projects-bg');
   projectContainer.appendChild(projectsBg);
-  projectsBg.style.backgroundImage = `url(../../images/projects/${project.bg})`;
+  projectsBg.style.backgroundImage = `url(../../images/${project.bg})`;
 
   const featuredProject = document.createElement('p');
   featuredProject.setAttribute('class', 'featured');
