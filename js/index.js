@@ -75,3 +75,20 @@ const sendEmail = () => {
   let link = "mailto:" + email + "?subject=" + subject + "&body=" + message;
   window.open(link, '_blank');
 }
+
+/*
+  * Smooth Scroll
+*/
+const links = document.querySelectorAll('.nav-list a');
+
+links.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    const targetId = link.getAttribute('href').slice(1);
+    const targetSection = document.getElementById(targetId);
+    targetSection.scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
