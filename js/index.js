@@ -39,25 +39,6 @@ githubUrl.addEventListener('click', () => {
   window.open('https://github.com/inspecta/', '_blank');
 });
 
-//Contact Me
-const contactMe = document.querySelector('.btn-contact');
-const contactForm = document.getElementById('contact-form');
-const closeForm = document.querySelector('.fa-times');
-
-contactMe.addEventListener('click', () => {
-  contactForm.style.display = 'flex';
-  contactForm.style.visibility = 'visible';
-});
-
-closeForm.addEventListener('click', () => {
-  contactForm.style.display = 'none';
-  contactForm.style.visibility = 'hidden';
-});
-
-/*
-  Menu
-*/
-// const menu = document.querySelector('.mobile-menu');
 const hamburgerMenu = document.querySelector('.fa-bars');
 const closeMenu = document.querySelector('.fa-close');
 const menu = document.querySelector('.nav-list');
@@ -81,3 +62,55 @@ menu.addEventListener('click', () => {
     hamburgerMenu.style.display = 'block';
   }
 });
+
+/*
+  * Toggle display modes
+*/
+const toggleButton = document.getElementById('toggle-mode');
+const currentMode = localStorage.getItem('mode');
+
+if (currentMode === 'dark') {
+  document.body.classList.add('dark');
+  toggleButton.classList.add('dark');
+  toggleButton.setAttribute('aria-pressed', 'true');
+  toggleButton.querySelector('.toggle__text').textContent = 'Dark';
+} else {
+  document.body.classList.add('light');
+  toggleButton.classList.add('light');
+  toggleButton.querySelector('.toggle__text').textContent = 'Light';
+}
+
+toggleButton.addEventListener('click', () => {
+  const body = document.body;
+  const isDark = body.classList.contains('dark');
+
+  if (isDark) {
+    body.classList.replace('dark', 'light');
+    toggleButton.classList.replace('dark', 'light');
+    toggleButton.querySelector('.toggle__icon').style.transform = 'translateX(0%)';
+    toggleButton.querySelector('.toggle__text').textContent = 'Light';
+    localStorage.setItem('mode', 'light');
+  } else {
+    body.classList.replace('light', 'dark');
+    toggleButton.classList.replace('light', 'dark');
+    toggleButton.querySelector('.toggle__icon').style.transform = 'translateX(100%)';
+    toggleButton.querySelector('.toggle__text').textContent = 'Dark';
+    localStorage.setItem('mode', 'dark');
+  }
+
+  toggleButton.setAttribute('aria-pressed', !isDark);
+  toggleButton.blur();
+});
+
+/*
+  * Email
+*/
+
+const sendEmail = () => {
+  let email = document.getElementById("email").value;
+  let message = document.getElementById("message").value;
+  let subject = "New Message from Portfolio";
+
+  let link = "mailto:" + email + "?subject=" + subject + "&body=" + message;
+  window.open(link, '_blank');
+}

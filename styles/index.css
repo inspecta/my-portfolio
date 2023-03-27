@@ -115,8 +115,8 @@ body {
 
 .btn-submit-message, .btn-resume, .btn-course,
 .btn-contact {
-  padding: 10px 40px;
-  border-radius: 5px;
+  padding: 15px 40px;
+  border-radius: 25px;
   display: inline-block;
   cursor: pointer;
   background-color: transparent;
@@ -167,6 +167,15 @@ body {
   font-weight: 700;
 }
 
+.font-3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.font-5 {
+  font-family: "Poiret One", cursive;
+}
+
 body {
   background: #0a192f;
 }
@@ -201,7 +210,6 @@ body {
   align-items: center;
   gap: 1em;
   margin-bottom: 1em;
-  margin-top: 3em;
 }
 .heading-hr hr {
   flex-grow: 1;
@@ -224,19 +232,30 @@ aside {
   margin: 0 auto;
 }
 .nav-list li {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   text-align: right;
   padding-right: 10px;
 }
 .nav-list li a {
   text-decoration: none;
 }
+.nav-list .resume {
+  padding: 10px 30px;
+  border: 1px solid rgb(94, 241, 207);
+  color: rgb(94, 241, 207);
+  border-radius: 20px;
+}
+.nav-list .resume:hover {
+  background: rgba(94, 241, 207, 0.2);
+  color: #fff;
+}
 
 nav {
   width: 100%;
   position: fixed;
-  background-color: #0a192f;
   z-index: 1;
+  background-color: #0a192f;
+  top: 0;
 }
 nav .mobile-view {
   display: flex;
@@ -264,10 +283,17 @@ nav .mobile-view .fa-close:hover {
 
 .home {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
 }
 .home .intro {
   color: rgb(94, 241, 207);
-  margin-top: 8em;
+  font-weight: bold;
+  font-family: "Poiret One", cursive;
+  font-size: 1.1em;
 }
 .home .home-header {
   color: #fff;
@@ -282,6 +308,7 @@ nav .mobile-view .fa-close:hover {
 }
 
 .about-me {
+  height: 100vh;
   text-align: justify;
 }
 .about-me p {
@@ -294,12 +321,15 @@ nav .mobile-view .fa-close:hover {
 }
 .about-me .technologies .technologies-list {
   display: flex;
-  gap: 1em;
 }
-.about-me .technologies li::before {
-  content: "▹";
+.about-me .technologies .technologies-list div {
+  flex: 1;
+}
+.about-me .technologies li {
   padding-right: 10px;
-  font-size: 20px;
+}
+.about-me .technologies li .fa {
+  margin-right: 10px;
   color: rgb(94, 241, 207);
 }
 .about-me .about-me-photo {
@@ -341,6 +371,7 @@ nav .mobile-view .fa-close:hover {
 .experience .work-places {
   display: flex;
   flex-direction: column;
+  height: 60vh;
 }
 .experience .work-places .works {
   width: 100%;
@@ -445,22 +476,12 @@ nav .mobile-view .fa-close:hover {
   justify-content: center;
 }
 .contact-me .contact-form {
-  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 1em;
-  left: 2em;
-  position: fixed;
   margin: auto;
   width: 90%;
-  background: rgba(10, 25, 47, 0.85);
-  border: 1px solid rgb(94, 241, 207);
   border-radius: 5px;
-  overflow: auto;
-  visibility: hidden;
-  z-index: 1001;
-  height: 95vh;
 }
 .contact-me .contact-form .contact-header {
   display: flex;
@@ -488,10 +509,11 @@ nav .mobile-view .fa-close:hover {
   outline: 0;
   margin-bottom: 1.5em;
   border: 0;
-  color: rgba(10, 25, 47, 0.85);
+  color: #000;
   font-size: 1em;
   border-radius: 5px;
   padding: 1em;
+  background-color: rgb(171, 182, 212);
 }
 .contact-me .contact-form input::placeholder,
 .contact-me .contact-form textarea::placeholder {
@@ -502,11 +524,11 @@ nav .mobile-view .fa-close:hover {
 .contact-me .contact-form #name:focus,
 .contact-me .contact-form #email:focus,
 .contact-me .contact-form #message:focus {
-  box-shadow: 0 0 0.5px 1px rgb(94, 241, 207);
+  box-shadow: 0 0 0 2px rgb(94, 241, 207);
 }
 .contact-me .contact-form input:invalid,
 .contact-me .contact-form textarea:invalid {
-  box-shadow: 0 0 0 1px red;
+  box-shadow: 0 0 0 2px red;
 }
 
 footer ul > li > a {
@@ -600,7 +622,6 @@ footer .footer-icons p {
     position: relative;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     background-color: #0a192f;
   }
   header nav .mobile-view {
@@ -620,8 +641,15 @@ footer .footer-icons p {
   header .nav-list li a {
     text-decoration: none;
   }
-  header .nav-list .btn-resume {
-    margin-right: 15px;
+  header .nav-list .resume {
+    padding: 10px 30px;
+    border: 1px solid rgb(94, 241, 207);
+    color: rgb(94, 241, 207);
+    border-radius: 20px;
+  }
+  header .nav-list .resume:hover {
+    background: rgba(94, 241, 207, 0.2);
+    color: #fff;
   }
   header .nav-list li a .nav-title:hover {
     color: #fff;
@@ -629,14 +657,14 @@ footer .footer-icons p {
   main {
     width: 90%;
     margin: auto;
-    padding: 4em;
+    padding: 4em 4em 0 4em;
   }
   .home {
     width: 100%;
-    padding: 3em 0 0 0;
   }
   .home .home-header {
     font-size: 3em;
+    font-family: "Poppins", Verdana, sans-serif;
   }
   .home .home-info {
     font-size: 2.5em;
@@ -658,7 +686,6 @@ footer .footer-icons p {
   .header-hr {
     height: 0;
     rotate: 180deg;
-    width: 100%;
   }
   .home-email {
     font-size: 30px;
@@ -670,7 +697,6 @@ footer .footer-icons p {
   .about-me {
     display: flex;
     flex-direction: column;
-    padding: 0;
     gap: 1em;
   }
   .about-me .about-me-body {
@@ -689,13 +715,10 @@ footer .footer-icons p {
     height: 100%;
     width: 100%;
   }
-  .experience {
-    padding: 0;
-  }
   .experience .work-places {
     display: grid;
-    grid-template-columns: 40% 60%;
-    width: 80%;
+    grid-template-columns: 30% 70%;
+    width: 100%;
     margin: auto;
   }
   .experience .work-places .works {
@@ -718,6 +741,7 @@ footer .footer-icons p {
     border-left: 5px solid rgb(94, 241, 207);
     margin-left: -3px;
     font-weight: bold;
+    font-size: 18px;
   }
   .projects {
     padding: 0;
@@ -735,9 +759,6 @@ footer .footer-icons p {
   }
   .projects .projects-container .projects-bg {
     flex-basis: 50%;
-  }
-  .contact-me {
-    padding: 0;
   }
 }
 

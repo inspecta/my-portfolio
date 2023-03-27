@@ -6,10 +6,14 @@ const works = [
     title: 'Backend Developer',
     date: 'May 2017 - March 2021',
     roles: [
-      'Developed high-quality software that met or even exceeded user expectations\
-       using the Agile methodology',
-      'Optimized code compilation by identifying and fixing performance bottlenecks.',
-      'Successfully trained and mentored interns.',
+      'Implemented efficient and scalable backend architectures for multiple \
+      applications, resulting in improved performance, and reduced downtime. \
+      As a result, we received a 95% user satisfaction rating.',
+      'Proposed new ideas and communicated effectively about an update or change \
+      to a project. This improved the project’s user experience and resulted in a \
+      20% increase in customer engagement',
+      'Trained and mentored 15+ interns. Helped them improve their skills and \
+      coding abilities. They were able to make significant contributions to the company projects.',
     ],
   },
   {

@@ -1,5 +1,4 @@
 $font-family: "Nunito", sans-serif;
-// $primary-color: #36e600;
 $primary-color: rgba(10, 25, 47, 0.85);
 $secondary-color: rgba(94, 241, 207, 1);
 $secondary-color-2: rgba(94, 241, 207, 0.4);
@@ -20,7 +19,6 @@ $flex-column: column;
   }
 }
 
-//Padding
 $sizes: (1, 2, 3, 4, 5, 6);
 
 @each $size in $sizes {

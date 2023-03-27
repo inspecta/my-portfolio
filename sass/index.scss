@@ -24,6 +24,15 @@
   font-weight: 700;
 }
 
+.font-3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+
+.font-5 {
+  font-family: "Poiret One", cursive;
+}
+
 body {
   background: #0a192f;
 }
@@ -59,7 +68,6 @@ body {
     align-items: center;
     gap: 1em;
     margin-bottom: 1em;
-    margin-top: 3em;
   }
 
   hr {
@@ -84,7 +92,7 @@ aside {
   margin: 0 auto;
 
   li {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: right;
     padding-right: 10px;
 
@@ -92,13 +100,26 @@ aside {
       text-decoration: none;
     }
   }
+
+  .resume {
+    padding: 10px 30px;
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    border-radius: 20px;
+  }
+
+  .resume:hover {
+    background: rgba(94, 241, 207, 0.2);
+    color: #fff;
+  }
 }
 
 nav {
   width: 100%;
   position: fixed;
-  background-color: #0a192f;
   z-index: 1;
+  background-color: #0a192f;
+  top: 0;
 
   .mobile-view {
     display: $display-flex;
@@ -131,10 +152,17 @@ nav {
 
 .home {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100vh;
 
   .intro {
     color: $secondary-color;
-    margin-top: 8em;
+    font-weight: bold;
+    font-family: "Poiret One", cursive;
+    font-size: 1.1em;
   }
 
   .home-header {
@@ -153,6 +181,12 @@ nav {
 }
 
 .about-me {
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  height: 100vh;
+  // width: 100%;
   text-align: justify;
 
   p {
@@ -166,14 +200,19 @@ nav {
 
     .technologies-list {
       display: flex;
-      gap: 1em;
+
+      div {
+        flex: 1;
+      }
     }
 
-    li::before {
-      content: "▹";
+    li {
       padding-right: 10px;
-      font-size: 20px;
-      color: $secondary-color;
+
+      .fa {
+        margin-right: 10px;
+        color: $secondary-color;
+      }
     }
   }
 
@@ -196,7 +235,6 @@ nav {
       position: absolute;
       top: 0;
       left: 0;
-      // background-color: rgba(94, 241, 207, 0.6);
       width: 100%;
       height: 100%;
       border-radius: 10px;
@@ -224,6 +262,7 @@ nav {
   .work-places {
     display: flex;
     flex-direction: column;
+    height: 60vh;
 
     .works {
       width: 100%;
@@ -351,22 +390,13 @@ nav {
   }
 
   .contact-form {
-    display: none;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    top: 1em;
-    left: 2em;
-    position: fixed;
     margin: auto;
     width: 90%;
-    background: $primary-color;
-    border: 1px solid $secondary-color;
+    // background: $primary-color;
     border-radius: 5px;
-    overflow: auto;
-    visibility: hidden;
-    z-index: 1001;
-    height: 95vh;
 
     .contact-header {
       display: flex;
@@ -398,10 +428,11 @@ nav {
       outline: 0;
       margin-bottom: 1.5em;
       border: 0;
-      color: $primary-color;
+      color: #000;
       font-size: 1em;
       border-radius: 5px;
       padding: 1em;
+      background-color: $tertiary-color;
     }
 
     input::placeholder,
@@ -414,12 +445,12 @@ nav {
     #name:focus,
     #email:focus,
     #message:focus {
-      box-shadow: 0 0 0.5px 1px $secondary-color;
+      box-shadow: 0 0 0 2px $secondary-color;
     }
 
     input:invalid,
     textarea:invalid {
-      box-shadow: 0 0 0 1px red;
+      box-shadow: 0 0 0 2px red;
     }
   }
 }
@@ -532,7 +563,6 @@ footer {
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: space-between;
       background-color: #0a192f;
 
       .mobile-view {
@@ -555,8 +585,16 @@ footer {
         text-decoration: none;
       }
 
-      .btn-resume {
-        margin-right: 15px;
+      .resume {
+        padding: 10px 30px;
+        border: 1px solid $secondary-color;
+        color: $secondary-color;
+        border-radius: 20px;
+      }
+
+      .resume:hover {
+        background: rgba(94, 241, 207, 0.2);
+        color: #fff;
       }
 
       li a .nav-title:hover {
@@ -568,15 +606,15 @@ footer {
   main {
     width: 90%;
     margin: auto;
-    padding: 4em;
+    padding: 4em 4em 0 4em;
   }
 
   .home {
     width: 100%;
-    padding: 3em 0 0 0;
 
     .home-header {
       font-size: 3em;
+      font-family: "Poppins", Verdana, sans-serif;
     }
 
     .home-info {
@@ -604,7 +642,6 @@ footer {
   .header-hr {
     height: 0;
     rotate: 180deg;
-    width: 100%;
   }
 
   .home-email {
@@ -619,7 +656,6 @@ footer {
   .about-me {
     display: flex;
     flex-direction: column;
-    padding: 0;
     gap: 1em;
 
     .about-me-body {
@@ -644,12 +680,10 @@ footer {
   }
 
   .experience {
-    padding: 0;
-
     .work-places {
       display: grid;
-      grid-template-columns: 40% 60%;
-      width: 80%;
+      grid-template-columns: 30% 70%;
+      width: 100%;
       margin: auto;
 
       .works {
@@ -674,6 +708,7 @@ footer {
           border-left: 5px solid $secondary-color;
           margin-left: -3px;
           font-weight: bold;
+          font-size: 18px;
         }
       }
     }
@@ -696,13 +731,8 @@ footer {
       }
 
       .projects-bg {
-        // height: 20em;
         flex-basis: 50%;
       }
     }
-  }
-
-  .contact-me {
-    padding: 0;
   }
 }
