@@ -64,45 +64,6 @@ menu.addEventListener('click', () => {
 });
 
 /*
-  * Toggle display modes
-*/
-const toggleButton = document.getElementById('toggle-mode');
-const currentMode = localStorage.getItem('mode');
-
-if (currentMode === 'dark') {
-  document.body.classList.add('dark');
-  toggleButton.classList.add('dark');
-  toggleButton.setAttribute('aria-pressed', 'true');
-  toggleButton.querySelector('.toggle__text').textContent = 'Dark';
-} else {
-  document.body.classList.add('light');
-  toggleButton.classList.add('light');
-  toggleButton.querySelector('.toggle__text').textContent = 'Light';
-}
-
-toggleButton.addEventListener('click', () => {
-  const body = document.body;
-  const isDark = body.classList.contains('dark');
-
-  if (isDark) {
-    body.classList.replace('dark', 'light');
-    toggleButton.classList.replace('dark', 'light');
-    toggleButton.querySelector('.toggle__icon').style.transform = 'translateX(0%)';
-    toggleButton.querySelector('.toggle__text').textContent = 'Light';
-    localStorage.setItem('mode', 'light');
-  } else {
-    body.classList.replace('light', 'dark');
-    toggleButton.classList.replace('light', 'dark');
-    toggleButton.querySelector('.toggle__icon').style.transform = 'translateX(100%)';
-    toggleButton.querySelector('.toggle__text').textContent = 'Dark';
-    localStorage.setItem('mode', 'dark');
-  }
-
-  toggleButton.setAttribute('aria-pressed', !isDark);
-  toggleButton.blur();
-});
-
-/*
   * Email
 */
 
