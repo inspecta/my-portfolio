@@ -92,3 +92,24 @@ links.forEach(link => {
     });
   });
 });
+
+/*
+  * Send Email
+*/
+document.getElementById("contact-form").addEventListener("submit", function (event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const message = document.getElementById("message").value;
+
+  const link = "mailto:djmulinde@gmail.com"
+    + "?subject=" + encodeURIComponent("Email from the Portfolio")
+    + "&body=" + encodeURIComponent("Name: " + name + "\r\nEmail: " + email + "\r\nMessage: " + message);
+
+  window.open(link, "_blank")
+
+  document.getElementById("name").value = "";
+  document.getElementById("email").value = "";
+  document.getElementById("message").value = "";
+});

@@ -429,6 +429,7 @@ nav {
       border-radius: 5px;
       padding: 1em;
       background-color: $tertiary-color;
+      font-family: "Titillium Web", Times, serif;
     }
 
     input::placeholder,
@@ -444,8 +445,13 @@ nav {
       box-shadow: 0 0 0 2px $secondary-color;
     }
 
-    input:invalid,
-    textarea:invalid {
+    input:required,
+    textarea:required {
+      box-shadow: 0 0 0 2px $secondary-color;
+    }
+
+    input:required:invalid,
+    textarea:required:invalid {
       box-shadow: 0 0 0 2px red;
     }
   }
@@ -474,7 +480,7 @@ footer {
 
 .contact-me {
   width: 100%;
-  height: 70vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
 }
