@@ -445,14 +445,9 @@ nav {
       box-shadow: 0 0 0 2px $secondary-color;
     }
 
-    input:required,
-    textarea:required {
-      box-shadow: 0 0 0 2px $secondary-color;
-    }
-
     input:required:invalid,
     textarea:required:invalid {
-      box-shadow: 0 0 0 2px red;
+      box-shadow: 0 0 0 2px rgb(255, 166, 166);
     }
   }
 }

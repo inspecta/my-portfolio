@@ -529,13 +529,9 @@ nav .mobile-view .fa-close:hover {
 .contact-me .contact-form #message:focus {
   box-shadow: 0 0 0 2px rgb(94, 241, 207);
 }
-.contact-me .contact-form input:required,
-.contact-me .contact-form textarea:required {
-  box-shadow: 0 0 0 2px rgb(94, 241, 207);
-}
 .contact-me .contact-form input:required:invalid,
 .contact-me .contact-form textarea:required:invalid {
-  box-shadow: 0 0 0 2px red;
+  box-shadow: 0 0 0 2px rgb(255, 166, 166);
 }
 
 footer ul > li > a {
