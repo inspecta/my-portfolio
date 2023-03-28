@@ -81,8 +81,13 @@ const sendEmail = () => {
 */
 const links = document.querySelectorAll('.nav-list a');
 
-links.forEach(link => {
+links.forEach((link, index) => {
   link.addEventListener('click', e => {
+
+    if (index === links.length - 1) {
+      return;
+    }
+
     e.preventDefault();
 
     const targetId = link.getAttribute('href').slice(1);

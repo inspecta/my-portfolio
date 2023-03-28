@@ -240,9 +240,15 @@ aside {
 }
 .nav-list .resume {
   padding: 10px 30px;
-  border: 1px solid rgb(94, 241, 207);
+  border: 2px solid rgb(94, 241, 207);
   color: rgb(94, 241, 207);
-  border-radius: 20px;
+  border-radius: 40px;
+}
+.nav-list .resume .fa span {
+  font-family: "Poiret One", cursive;
+  font-weight: bold;
+  color: rgb(171, 182, 212);
+  padding-left: 5px;
 }
 .nav-list .resume:hover {
   background: rgba(94, 241, 207, 0.2);
