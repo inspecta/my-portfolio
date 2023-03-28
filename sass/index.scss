@@ -230,7 +230,7 @@ nav {
       background: url("../images/about-me-3.png") no-repeat;
       height: 350px;
       width: 350px;
-      background-size: cover;
+      background-size: contain;
       background-position: center;
       position: relative;
       margin: auto;
@@ -678,11 +678,6 @@ footer {
 
     .about-me-photo {
       width: 50%;
-
-      .photo {
-        height: 100%;
-        width: 100%;
-      }
     }
   }
 

@@ -348,7 +348,7 @@ nav .mobile-view .fa-close:hover {
   background: url("../images/about-me-3.png") no-repeat;
   height: 350px;
   width: 350px;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   position: relative;
   margin: auto;
@@ -719,10 +719,6 @@ footer .footer-icons p {
   }
   .about-me .about-me-photo {
     width: 50%;
-  }
-  .about-me .about-me-photo .photo {
-    height: 100%;
-    width: 100%;
   }
   .experience .work-places {
     display: grid;
