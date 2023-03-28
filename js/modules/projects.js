@@ -7,8 +7,10 @@ const projects = [
      usernames and passwords. Once logged in, they can see all the available cars,\
       and the car details and can reserve a car',
     tools: ['Ruby on Rails', 'React', 'Redux', 'RESTful API', 'HTML/CSS'],
-    links: ['https://github.com/inspecta/bridal-cars-backend', '\
-    https://deploy-preview-18--storied-madeleine-8f057b.netlify.app/cars'],
+    links: [
+      'https://github.com/inspecta/bridal-cars-backend',
+      'https://storied-madeleine-8f057b.netlify.app/'
+    ],
     bg: 'BridalCarReservation.png',
   },
   {
@@ -16,7 +18,10 @@ const projects = [
     name: 'Book Store CMS',
     description: 'A content management system for books developed using React, Redux, and API calls. Add a new book using the POST API method, GET stored books, and also DELETE unwanted books. For API calls, I used the AXIOS Library.',
     tools: ['ReactJs', 'Redux', 'APIs', 'Jest', 'HTML/CSS'],
-    links: ['https://github.com/inspecta/Dex-Books', 'https://bookstore-cms-derrick.netlify.app'],
+    links: [
+      'https://github.com/inspecta/Dex-Books',
+      'https://bookstore-cms-derrick.netlify.app'
+    ],
     bg: 'BookStore.png',
   },
   {
@@ -24,7 +29,10 @@ const projects = [
     name: 'Microverse Monthly Assembly',
     description: "Microverse monthly assembly; is the capstone project of my first module at Microverse using HTML semantic practices, and DOM Manipulation to dynamically generate speakers' content. Responsive and designed using the Mobile- first design. Its a replica of the CC Global Summit Korea conference in 2015.'",
     tools: ['JavaScript', 'HTML5', 'CSS3'],
-    links: ['https://github.com/inspecta/Capstone-web-project', 'https://inspecta.github.io/Capstone-web-project/'],
+    links: [
+      'https://github.com/inspecta/Capstone-web-project',
+      'https://inspecta.github.io/Capstone-web-project/'
+    ],
     bg: 'MicroverseZoomAssembly.png',
   },
   {
@@ -32,7 +40,10 @@ const projects = [
     name: 'YouFlex',
     description: 'A capstone JavaScript application that utilizes 2 APIs to display movies and enables users to like and comment on their favorite movies. The application consists of the Homepage that contains the list of movies and a popup window that displays details of a specific movie, its likes, and comments.',
     tools: ['JavaScript', 'WebPack', 'RestAPIs', 'HTML5', 'CSS3'],
-    links: ['https://github.com/Khaled-AlKhateeb/YouFlex', 'https://khaled-alkhateeb.github.io/YouFlex/'],
+    links: [
+      'https://github.com/Khaled-AlKhateeb/YouFlex',
+      'https://khaled-alkhateeb.github.io/YouFlex/'
+    ],
     bg: 'YouFlex.png'
   }
 ]
