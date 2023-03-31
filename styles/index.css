@@ -379,7 +379,7 @@ nav .mobile-view .fa-close:hover {
 .experience .work-places {
   display: flex;
   flex-direction: column;
-  height: 60vh;
+  height: 40vh;
 }
 .experience .work-places .works {
   width: 100%;
