@@ -1,15 +1,26 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# MY PORTFOLIO
 
 > Description the project.
-
+  This is my personal portfolio built using HTML5, JavaScript and SASS (CSS preprocessor). It's a single page application deployed on Netlify.
+  Sections include the home, about me, projects, works and contact me sections. Browse through the sections by either scrolling or using the navigation
+  bar links. Enjoy!
 
 ## Built With
 
 - Major languages
+  - HTML5
+  - JavaScript
+  - CSS
 - Frameworks
+  - Sass
+  - ES6
 - Technologies used
+  - VS Code
+  - Linters
+  - GitFlow
+  - Netlify
+  - Chrome
 
 ## Live Demo (if available)
 
@@ -25,32 +36,31 @@
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+  - A computer, VS Studio, Chrome
 
 ### Setup
 
 ### Install
+  - Clone this repository on your local machine
 
 ### Usage
-
+  - Use live server plugin to run the index.html in the root of the project.
+  
 ### Run tests
-
+  - N/A
+  
 ### Deployment
-
+  - You Netlify to deploy project
 
 
 ## Authors
 
-👤 **Author1**
+👤 **Derrick Mulinde**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@inspecta](https://github.com/inspecta)
+- Twitter: [@djmulinde](https://twitter.com/djmulinde)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/derrick-mulinde)
 
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -72,4 +82,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
