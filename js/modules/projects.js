@@ -14,18 +14,33 @@ const projects = [
     bg: 'BridalCarReservation.png',
   },
   {
-    id: 1,
-    name: 'Book Store CMS',
-    description: 'A content management system for books developed using React, Redux, and API calls. Add a new book using the POST API method, GET stored books, and also DELETE unwanted books. For API calls, I used the AXIOS Library.',
-    tools: ['ReactJs', 'Redux', 'APIs', 'Jest', 'HTML/CSS'],
+    id: 6,
+    name: 'Player Ratings',
+    description: 'React app that helps the user to collect ratings of football \
+    players after a game. Rate your players out of 10 depending on how they \
+    performed in the game. Delete, edit or update any player rating. Developed \
+    using React, and the app state is managed using React Hooks.',
+    tools: ['React', 'TailwindCSS'],
     links: [
-      'https://github.com/inspecta/Dex-Books',
-      'https://bookstore-cms-derrick.netlify.app'
+      'https://github.com/inspecta/player-ratings',
+      'https://rating-players-derrick.netlify.app/'
     ],
-    bg: 'BookStore.png',
+    bg: 'player-ratings.png',
   },
   {
     id: 2,
+    name: 'Blog',
+    description: 'A blog web app. A user will be able to login into the application (Credentials: Username and Password). The logged in user can create posts. These posts will be listed and readers of these posts will be empowered to interact with the posts by either adding comments or even liking the posts.',
+    tools: ['Ruby on Rails', 'JavaScript', 'HTML', 'TailwindCSS', 'RSpec/Capybara'],
+    links: [
+      'https://github.com/inspecta/Blog',
+      ''
+    ],
+    bg: 'blog.png',
+  },
+
+  {
+    id: 5,
     name: 'Microverse Monthly Assembly',
     description: "Microverse monthly assembly; is the capstone project of my first module at Microverse using HTML semantic practices, and DOM Manipulation to dynamically generate speakers' content. Responsive and designed using the Mobile- first design. Its a replica of the CC Global Summit Korea conference in 2015.'",
     tools: ['JavaScript', 'HTML5', 'CSS3'],
